@@ -24,6 +24,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <link rel="stylesheet" href="styles.css" />
     <title>React App</title>
   </head>
   <body>
@@ -35,9 +36,86 @@
 
       You can add webfonts, meta tags, or analytics to this file.
       The build step will place the bundled scripts into the <body> tag.
+        
 
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <h1 id="title">Create Account</h1>
+    <form>
+      <div>
+        <!-- First Name-->
+        <div class="info">
+          <label for="first-name" id="first-name"
+            >Enter your first name:
+          </label>
+          <input type="text" name="first-name" required />
+        </div>
+
+        <!-- Last Name-->
+        <div class="info">
+          <label for="last-name">Enter your last name: </label>
+          <input type="text" name="last-name" id="last-name" required />
+        </div>
+
+        <!-- Birthday-->
+        <div class="info">
+          <label for="birthday">Birthday: </label>
+          <input type="date" id="birthday" name="birthday" required />
+        </div>
+
+        <!-- Gender -->
+        <div class="info">
+          <p>What is your gender:</p>
+
+          <input type="radio" name="gender" value="female" />
+          <label for="gender">Female </label><br />
+
+          <input type="radio" name="gender" value="male" />
+          <label for="gender">Male</label><br />
+
+          <input type="radio" name="gender" value="more" />
+          <label for="gender">More</label>
+        </div>
+
+        <!-- Email -->
+        <div class="info">
+          <label for="email">Enter your email: </label>
+          <input type="email" name="email" required />
+        </div>
+
+        <!-- Preference -->
+        <div class="info">
+          <p>Show me</p>
+
+          <input type="radio" name="preference" value="female" />
+          <label for="preference">Female</label> <br />
+
+          <input type="radio" name="preference" value="male" />
+          <label for="preference">Male</label> <br />
+
+          <input type="radio" name="preference" value="everyone" />
+          <label for="preference">Everyone</label>
+        </div>
+
+        <!-- profiles-->
+
+        <div class="info">
+          <label for="profile">Profile Photo</label><br />
+          <input type="file" name="profile" required />
+        </div>
+
+        <!-- sexual orientation -->
+
+        <div classs="info"></div>
+
+        <!-- bio-->
+        <div class="info">
+          <textarea placeholder="place a description of "></textarea>
+        </div>
+      </div>
+
+      <button>Submit</button>
+    </form>
   </body>
 </html>

@@ -8,6 +8,9 @@ class Users(models.Model):
     gender = models.CharField(max_length=50)
     pronouns = models.CharField(max_length=50)
     biography = models.TextField()
+    #location = models.CharField(max_length=100)
+    #email = models.CharField(max_length=100)
+    completed= models.BooleanField(default=False)
 
     def _str_(self):
         return self.title

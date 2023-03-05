@@ -9,8 +9,8 @@ class App extends Component {
       todoList: [],
       modal: false,
       activeItem: {
-        title: "",
-        description: "",
+        name: "",
+        school: "",
         completed: false,
       },
     };
@@ -22,13 +22,16 @@ class App extends Component {
 
   refreshList = () => {
     axios
-      .get("/api/todos/")
+      .get("/api/users/")
       .then((res) => this.setState({ todoList: res.data }))
       .catch((err) => console.log(err));
   };
 
   toggle = () => {
-    
+    axios
+      .get("/api/match/")
+      .then((res) => console.log("bruh"))
+      .catch((err) => console.log(err));
   };
 
   handleSubmit = (item) => {
@@ -36,18 +39,18 @@ class App extends Component {
 
     if (item.id) {
       axios
-        .put(`/api/todos/${item.id}/`, item)
+        .put(`/api/users/${item.id}/`, item)
         .then((res) => this.refreshList());
       return;
     }
     axios
-      .post("/api/todos/", item)
+      .post("/api/users/", item)
       .then((res) => this.refreshList());
   };
 
   handleDelete = (item) => {
     axios
-      .delete(`/api/todos/${item.id}/`)
+      .delete(`/api/users/${item.id}/`)
       .then((res) => this.refreshList());
   };
 
@@ -103,14 +106,14 @@ class App extends Component {
           className={`todo-title mr-2 ${
             this.state.viewCompleted ? "completed-todo" : ""
           }`}
-          title={item.description}
+          title={item.name}
         >
-          {item.title}
+          {item.name}
         </span>
         <span>
           <button
             className="btn btn-secondary mr-2"
-            onClick={() => this.editItem(item)}
+            onClick={() => this.handleSubmit(item)}
           >
             Edit
           </button>
@@ -135,9 +138,9 @@ class App extends Component {
               <div className="mb-4">
                 <button
                   className="btn btn-primary"
-                  onClick={this.createItem}
+                  onClick={this.toggle()}
                 >
-                  Add task
+                  match
                 </button>
               </div>
               {this.renderTabList()}

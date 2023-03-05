@@ -1,0 +1,13 @@
+backend information
+
+
+### Initial configuration
+django-admin startserver <server_name>
+python3  ./manage.py startapp <app_name>
+python3 ./manage.py migrate // migrates information, pretty much initializes initializes it 
+python3 ./manage.py runserver // runs the server (TESTING PURPOSES)
+
+
+### When making new models
+python3 ./manage.py makemigrations todo
+python3 ./manage.py migrate todo

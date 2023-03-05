@@ -48,7 +48,7 @@ if there are changes uncommited, first `git add .`
 
 `git commit -m ""`, Note to add a useful short message for info about commit
 
-Then finally `git push origin branch_name`, replacing branch_name with the name of your correspondingbranch name.
+Then finally `git push origin branch_name`, replacing branch_name with the name of your corresponding branch name.
 
 
 

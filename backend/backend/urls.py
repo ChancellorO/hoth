@@ -20,10 +20,10 @@ from users import views
 
 router = routers.DefaultRouter()
 router.register(r'users', views.TodoView, 'users')
-router.register(r'match', views.TodoView, 'match')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('bruh/', views.test),
+    path('match/', views.match),
+    
 ]

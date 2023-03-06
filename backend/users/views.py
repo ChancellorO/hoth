@@ -10,7 +10,8 @@ def test(request):
     # here Users.object
     return HttpResponse('<h1> bruh </h1>')
 def match(request):
-    best = algorithms.match()
+    queryset = Users.Objects.all()
+    best = algorithms.match(queryset, )
     bestInfo = Users.objects.filter(id=best)[0]
     print(bestInfo)
     return JsonResponse(bestInfo)

@@ -113,7 +113,7 @@ class algorithms:
             if selection < 0:
                 choice = i
 
-        return choice
+        return data[choice]
 
     def __init__(self):
         return

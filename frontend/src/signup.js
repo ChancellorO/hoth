@@ -1,4 +1,5 @@
 import React from 'react';
+import "bootswatch/dist/minty/bootstrap.min.css";
 import {
     Link
   } from "react-router-dom";
@@ -11,21 +12,17 @@ const SignUp = () => {
       <h1 id="title">Create Account</h1>
       <div>
         <div class="info">
-          <label for="first-name" id="first-name"
-            >Enter your first name:
-          </label>
-          <input type="text" name="first-name" required />
+        <label for="exampleInputEmail1" class="mx-2 form-label mt-4">Name</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name"></input>
         </div>
         <div class="info">
-          <label for="last-name">Enter your last name: </label>
-          <input type="text" name="last-name" id="last-name" required />
+        <label for="exampleInputEmail1" class="mx-2 form-label mt-4">School</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter School"></input>
         </div>
 
-
-        {/* <div class="info">
-          <label for="birthday">Birthday: </label>
-          <input type="date" id="birthday" name="birthday" required />
-        </div> */}
+        <label for="exampleInputEmail1" class="mx-2 form-label mt-4">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></input>
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 
 
         {/* <div class="info">
@@ -48,7 +45,7 @@ const SignUp = () => {
         </div>*/}
         </div> 
     </div>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" onclick="window.location.href = 'http://localhost:3000/'" >
         
     </input>
     {/* <Link to="/">Submit</Link> */}

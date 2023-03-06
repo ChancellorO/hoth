@@ -4,6 +4,7 @@ import axios from "axios";
 import './App.css';
 import SignUp from './signup';
 import Homepage from './homepage';
+import Matchpage from "./match";
 
 import {
   BrowserRouter as Router,
@@ -17,7 +18,8 @@ return (
     <Router>
     <Routes>
         <Route path='/sign-up' element={<SignUp/>} />
-        <Route path='/' element={<Homepage/>} />
+        <Route path='/home' element={<Homepage/>} />
+        <Route path='/match' element={<Matchpage/>} />
     </Routes>
     </Router>
 );

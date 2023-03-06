@@ -1,4 +1,4 @@
-h1 {
+#heading {
     text-align: center;
   }
   
@@ -19,12 +19,3 @@ h1 {
     height: 40px;
     border-radius: 5px;
   }
-label {
-    text-align: center;
-}
-input {
-    text-align: center;
-}
-.button {
-    text-align: center;
-}

@@ -1,16 +1,11 @@
 import React from 'react';
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootswatch/dist/minty/bootstrap.min.css";
-import './homepage.css'
-import("bootstrap");
+import './match.css';
 
-const Homepage = () => {
+const Matchpage = () => {
     return (
-        
         <div>
-        
         <head>
-            <title>Homepage</title>
+            <title>Match Page</title>
             <meta charset="UTF-8" />
         </head>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -30,7 +25,7 @@ const Homepage = () => {
           <a class="nav-link" href="#">Features</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Resources</a>
+          <a class="nav-link" href="#">Pricing</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">About</a>
@@ -53,31 +48,24 @@ const Homepage = () => {
     </div>
   </div>
 </nav>
-        <body>
-        <h1 id="heading">Homepage</h1>
+        <body class = "container">
+        <h1 id="heading">Match Page</h1>
 
         <hr />
         <br />
         <br />
-
-        <button class="btn btn-primary" id="match">Match</button>
-
-        <br />
-        <br />
-        <hr />
-        <br />
-        <br />
-
-        <h3></h3>
-
-        <div id="bottom">
-            <button class="btn btn-lg btn-primary" >Profile</button>
-            <button class="btn btn-lg btn-primary">Chat</button>
-            <button class="btn btn-lg btn-primary">Events</button>
+        <title>Found a Match!</title>
+        <div class="row">
+        <button class="mx-auto btn btn-lg btn-primary col-md-" id="friend">Add Friend? </button>
         </div>
+        <br />
+        <br />
+        <hr />
+        <br />
+        <br />
         </body>
         </div>
     );
 };
 
-export default Homepage;
+export default Matchpage;

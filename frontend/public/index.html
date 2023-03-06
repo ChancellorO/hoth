@@ -45,10 +45,8 @@
     <form>
       <div>
         <!-- First Name-->
-        <div class="info">
-          <label for="first-name" id="first-name"
-            >Enter your first name:
-          </label>
+        <div class="info" id="first-name">
+          <label for="first-name"><p>Enter your first name:</p></label>
           <input type="text" name="first-name" required />
         </div>
 
@@ -105,14 +103,17 @@
           <input type="file" name="profile" required />
         </div>
 
-        <!-- sexual orientation -->
-
-        <div classs="info"></div>
-
         <!-- bio-->
         <div class="info">
-          <textarea placeholder="place a description of "></textarea>
+          <p>Write a bio about yourself</p>
+          <textarea
+            placeholder="What I like to do is...."
+            rows="5"
+            cols="30"
+          ></textarea>
         </div>
+
+        <div></div>
       </div>
 
       <button>Submit</button>

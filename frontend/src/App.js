@@ -27,9 +27,7 @@ class App extends Component {
       .catch((err) => console.log(err));
   };
 
-  toggle = () => {
-    
-  };
+  toggle = () => {};
 
   handleSubmit = (item) => {
     this.toggle();
@@ -40,15 +38,11 @@ class App extends Component {
         .then((res) => this.refreshList());
       return;
     }
-    axios
-      .post("/api/todos/", item)
-      .then((res) => this.refreshList());
+    axios.post("/api/todos/", item).then((res) => this.refreshList());
   };
 
   handleDelete = (item) => {
-    axios
-      .delete(`/api/todos/${item.id}/`)
-      .then((res) => this.refreshList());
+    axios.delete(`/api/todos/${item.id}/`).then((res) => this.refreshList());
   };
 
   createItem = () => {
@@ -58,31 +52,31 @@ class App extends Component {
   };
 
   editItem = (item) => {
-    this.setState({ activeItem: item});
+    this.setState({ activeItem: item });
   };
 
   displayCompleted = (status) => {
     if (status) {
-      return this.setState({ viewCompleted: true });
+      return this.setState({ viewCompleted: false });
     }
 
-    return this.setState({ viewCompleted: false });
+    return this.setState({ viewCompleted: true });
   };
 
   renderTabList = () => {
     return (
       <div className="nav nav-tabs">
         <span
-          onClick={() => this.displayCompleted(true)}
+          onClick={() => this.displayCompleted(false)}
           className={this.state.viewCompleted ? "nav-link active" : "nav-link"}
         >
           Complete
         </span>
         <span
-          onClick={() => this.displayCompleted(false)}
+          onClick={() => this.displayCompleted(true)}
           className={this.state.viewCompleted ? "nav-link" : "nav-link active"}
         >
-          Incomplete
+          Incompl66
         </span>
       </div>
     );
@@ -125,7 +119,7 @@ class App extends Component {
     ));
   };
 
-  render() {
+  render(status) {
     return (
       <main className="container">
         <h1 className="text-white text-uppercase text-center my-4">Todo app</h1>
@@ -133,12 +127,12 @@ class App extends Component {
           <div className="col-md-6 col-sm-10 mx-auto p-0">
             <div className="card p-3">
               <div className="mb-4">
-                <button
-                  className="btn btn-primary"
-                  onClick={this.createItem}
-                >
-                  Add task
+                <button className="btn btn-primary" onClick={this.createItem}>
+                  Add task (test)
                 </button>
+                <p>test </p>
+                <p>status </p>
+                <p>test </p>
               </div>
               {this.renderTabList()}
               <ul className="list-group list-group-flush border-top-0">

@@ -1,7 +1,12 @@
 import React from 'react';
+import {
+    Link
+  } from "react-router-dom";
+import "./signup.css";
   
 const SignUp = () => {
   return (
+    <form method="post" action="/api/users/">
     <div>
       <h1 id="title">Create Account</h1>
       <div>
@@ -17,13 +22,13 @@ const SignUp = () => {
         </div>
 
 
-        <div class="info">
+        {/* <div class="info">
           <label for="birthday">Birthday: </label>
           <input type="date" id="birthday" name="birthday" required />
-        </div>
+        </div> */}
 
 
-        <div class="info">
+        {/* <div class="info">
           <p>What is your gender:</p>
 
           <input type="radio" name="gender" value="female" />
@@ -34,15 +39,20 @@ const SignUp = () => {
 
           <input type="radio" name="gender" value="more" />
           <label for="gender">More</label>
-        </div>
+        </div> */}
 
 
-        <div class="info">
+        {/* <div class="info">
           <label for="email">Enter your email: </label>
           <input type="email" name="email" required />
-        </div>
-        </div>
+        </div>*/}
+        </div> 
     </div>
+    <input type="submit" value="Submit">
+        
+    </input>
+    {/* <Link to="/">Submit</Link> */}
+    </form>
   );
 };
   

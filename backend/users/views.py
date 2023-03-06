@@ -11,7 +11,7 @@ def test(request):
     return HttpResponse('<h1> bruh </h1>')
 def match(request):
     queryset = Users.Objects.all()
-    best = algorithms.match(queryset, )
+    best = algorithms.match(queryset, something)
     bestInfo = Users.objects.filter(id=best)[0]
     print(bestInfo)
     return JsonResponse(bestInfo)
